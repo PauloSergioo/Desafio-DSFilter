@@ -1,0 +1,21 @@
+.search-filter {
+  background-color: var(--color-bg-tertiary);
+  height: 200px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.search-filter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-filter input {
+  border: 1px solid #c2c2c2;
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  outline: none;
+  padding-left: 10px;
+}

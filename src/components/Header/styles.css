@@ -1,0 +1,21 @@
+header {
+  background-color: var(--color-bg-primary);
+}
+
+.dsf-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.dsf-header h1 {
+  color: var(--color-font-tertiary);
+  font-size: 25px;
+}
+
+.dsf-header p {
+  color: var(--color-font-tertiary);
+  font-size: 12px;
+  font-weight: 700;
+}

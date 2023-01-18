@@ -1,0 +1,10 @@
+.dsf-button button {
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: var(--color-bg-primary);
+  border-style: none;
+  color: var(--color-font-tertiary);
+  font-size: 16px;
+  font-weight: 700;
+}
