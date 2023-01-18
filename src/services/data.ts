@@ -1,5 +1,9 @@
 import { ProductDTO } from "../models/product";
 
+export function findAll() : ProductDTO[] {
+  return products;
+}
+
 export function findByPrice(min: number, max: number): ProductDTO[] {
     return products
       .filter((x) => x.price >= min && x.price <= max)
