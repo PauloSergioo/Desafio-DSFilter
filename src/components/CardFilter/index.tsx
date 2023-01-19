@@ -15,9 +15,9 @@ export default function CardFilter({ onFilter }: Props) {
   const [formData, setFormData] = useState<FormData>({});
 
   function handleInputChange(event: any) {
-    const value = event.target.value;
-    const name = event.target.name;
-    setFormData({ ...formData, [name]: value });
+    const valueMax = event.target.value;
+    const valueMin = event.target.name;
+    setFormData({ ...formData, [valueMin]: valueMax });
   }
 
   function handleSubmit(event: any) {
@@ -27,7 +27,7 @@ export default function CardFilter({ onFilter }: Props) {
 
     if (onFilter) {
       onFilter(priceMin, priceMax);
-      console.log(onFilter);
+      console.log(priceMin, priceMax)
     }
   }
 
