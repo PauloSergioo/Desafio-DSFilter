@@ -8,27 +8,22 @@ type FormData = {
 };
 
 type Props = {
-  onFilter?: Function;
+  onFilter: Function;
 };
 
 export default function CardFilter({ onFilter }: Props) {
+
   const [formData, setFormData] = useState<FormData>({});
 
   function handleInputChange(event: any) {
-    const valueMax = event.target.value;
-    const valueMin = event.target.name;
-    setFormData({ ...formData, [valueMin]: valueMax });
+    const value = event.target.value;
+    const name = event.target.name;
+    setFormData({ ...formData, [name]: value });
   }
 
   function handleSubmit(event: any) {
     event.preventDefault();
-    const priceMin = formData.priceMin;
-    const priceMax = formData.priceMax;
-
-    if (onFilter) {
-      onFilter(priceMin, priceMax);
-      console.log(priceMin, priceMax)
-    }
+    onFilter(formData.priceMin || 0, formData.priceMax || Number.MAX_VALUE);
   }
 
   return (
