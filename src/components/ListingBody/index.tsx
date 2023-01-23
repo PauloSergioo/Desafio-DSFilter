@@ -11,7 +11,8 @@ type QueryParams = {
 };
 
 export default function ListingBody() {
-  const [queryParams, setQueryParam] = useState<QueryParams>({
+  
+  const [queryParams, setQueryParams] = useState<QueryParams>({
     valueMin: 0,
     valueMax: Number.MAX_VALUE,
   });
@@ -23,7 +24,8 @@ export default function ListingBody() {
   }, [queryParams]);
 
   function handleFilter(priceMin: number, priceMax: number) {
-    setQueryParam(priceMin , priceMax);
+    setQueryParams({valueMin: priceMin, valueMax: priceMax});
+    console.log(queryParams);
   }
 
   return (
