@@ -4,10 +4,10 @@ import Products from "../Products";
 import { ProductDTO } from "../../models/product";
 
 type Props = {
-  products: ProductDTO[]
-}
+  products: ProductDTO[];
+};
 
-export default function CardListing({products}: Props) {
+export default function CardListing({ products }: Props) {
   return (
     <div className="card-listing dsf-container">
       {products.map((product) => (

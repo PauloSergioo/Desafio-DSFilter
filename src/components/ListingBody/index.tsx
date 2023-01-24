@@ -12,26 +12,26 @@ type QueryParams = {
 };
 
 export default function ListingBody() {
-
   const [products, setProducts] = useState<ProductDTO[]>([]);
 
   const { setContextListCount } = useContext(ContextListCount);
-  
+
   const [queryParams, setQueryParams] = useState<QueryParams>({
     valueMin: 0,
     valueMax: Number.MAX_VALUE,
   });
 
   useEffect(() => {
-    const newProduct = productService
-      .findByPrice(queryParams.valueMin, queryParams.valueMax)
-      setProducts(newProduct)
-      setContextListCount(newProduct.length)
+    const newProduct = productService.findByPrice(
+      queryParams.valueMin,
+      queryParams.valueMax
+    );
+    setProducts(newProduct);
+    setContextListCount(newProduct.length);
   }, [queryParams]);
 
   function handleFilter(priceMin: number, priceMax: number) {
-    setQueryParams({valueMin: priceMin, valueMax: priceMax});
-    
+    setQueryParams({ valueMin: priceMin, valueMax: priceMax });
   }
 
   return (

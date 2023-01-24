@@ -12,7 +12,6 @@ type Props = {
 };
 
 export default function CardFilter({ onFilter }: Props) {
-
   const [formData, setFormData] = useState<FormData>({});
 
   function handleInputChange(event: any) {

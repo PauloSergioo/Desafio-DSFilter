@@ -3,7 +3,6 @@ import { ContextListCount } from "../../util/context-listing";
 import "./styles.css";
 
 export default function Header() {
-
   const { contextListCount } = useContext(ContextListCount);
 
   return (
