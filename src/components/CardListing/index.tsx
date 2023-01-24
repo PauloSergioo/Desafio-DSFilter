@@ -1,11 +1,16 @@
 import "./styles.css";
 import * as productService from "../../services/data";
 import Products from "../Products";
+import { ProductDTO } from "../../models/product";
 
-export default function CardListing() {
+type Props = {
+  products: ProductDTO[]
+}
+
+export default function CardListing({products}: Props) {
   return (
     <div className="card-listing dsf-container">
-      {productService.findByPrice(0, Number.MAX_VALUE).map((product) => (
+      {products.map((product) => (
         <Products key={product.id} data={product} />
       ))}
     </div>
